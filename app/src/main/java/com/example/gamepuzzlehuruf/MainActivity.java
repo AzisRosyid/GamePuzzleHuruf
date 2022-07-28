@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private Timer timer;
     private long timeCount;
 
-    MenuItem acak;
+    MenuItem ulang;
     MenuItem about;
     MenuItem keluar;
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
-        acak = menu.findItem(R.id.menuAcak);
+        ulang = menu.findItem(R.id.menuUlang);
         about = menu.findItem(R.id.menuAbout);
         keluar = menu.findItem(R.id.menuKeluar);
         playGame(false);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.menuAcak) {
+        if (id == R.id.menuUlang) {
             generateLetters();
             loadData();
         }
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void playGame(boolean play) {
         for (int i = 0; i < binding.group.getChildCount(); i++) btns[i / 4][i % 4].setClickable(play);
-        acak.setEnabled(play);
+        ulang.setEnabled(play);
         about.setEnabled(!play);
         keluar.setEnabled(!play);
     }
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
         if (isWin) {
             timer.cancel();
             AlertDialog.Builder alert = new AlertDialog.Builder(this)
-                    .setTitle("You Win it!")
+                    .setTitle("You Win It!")
                     .setMessage("Total Langkah: " + stepCount + "\nWaktu: " + binding.time.getText() + "\nIngin mengulang permainan ini?")
                     .setCancelable(false)
                     .setPositiveButton("Iya", (x, y) -> {
