@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/card"
+        app:strokeColor="@color/white"
+        app:cardCornerRadius="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="12dp"
+            android:id="@+id/group">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:tag="00"
+                android:text="A"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn1"
+                app:layout_constraintStart_toEndOf="@id/btn1"
+                app:layout_constraintBottom_toBottomOf="@id/btn1"
+                android:tag="01"
+                android:text="B"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn2"
+                app:layout_constraintStart_toEndOf="@id/btn2"
+                app:layout_constraintBottom_toBottomOf="@id/btn2"
+                android:tag="02"
+                android:text="C"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn3"
+                app:layout_constraintStart_toEndOf="@id/btn3"
+                app:layout_constraintBottom_toBottomOf="@id/btn3"
+                android:tag="03"
+                android:text="D"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn5"
+                style="@style/BtnRowStyle"
+                android:tag="10"
+                android:text="E"
+                app:layout_constraintEnd_toEndOf="@id/btn1"
+                app:layout_constraintStart_toStartOf="@id/btn1"
+                app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn6"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn5"
+                app:layout_constraintStart_toEndOf="@id/btn5"
+                app:layout_constraintBottom_toBottomOf="@id/btn5"
+                android:tag="11"
+                android:text="F"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn6"
+                app:layout_constraintStart_toEndOf="@id/btn6"
+                app:layout_constraintBottom_toBottomOf="@id/btn6"
+                android:tag="12"
+                android:text="G"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn7"
+                app:layout_constraintStart_toEndOf="@id/btn7"
+                app:layout_constraintBottom_toBottomOf="@id/btn7"
+                android:tag="13"
+                android:text="H"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9"
+                style="@style/BtnRowStyle"
+                app:layout_constraintTop_toBottomOf="@id/btn5"
+                app:layout_constraintStart_toStartOf="@id/btn5"
+                app:layout_constraintEnd_toEndOf="@id/btn5"
+                android:tag="20"
+                android:text="I"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn10"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn9"
+                app:layout_constraintStart_toEndOf="@id/btn9"
+                app:layout_constraintBottom_toBottomOf="@id/btn9"
+                android:tag="21"
+                android:text="J"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn11"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn10"
+                app:layout_constraintStart_toEndOf="@id/btn10"
+                app:layout_constraintBottom_toBottomOf="@id/btn10"
+                android:tag="22"
+                android:text="K"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn12"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn11"
+                app:layout_constraintStart_toEndOf="@id/btn11"
+                app:layout_constraintBottom_toBottomOf="@id/btn11"
+                android:tag="23"
+                android:text="L"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn13"
+                style="@style/BtnRowStyle"
+                app:layout_constraintTop_toBottomOf="@id/btn9"
+                app:layout_constraintStart_toStartOf="@id/btn9"
+                app:layout_constraintEnd_toEndOf="@id/btn9"
+                android:tag="30"
+                android:text="M"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn14"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn13"
+                app:layout_constraintStart_toEndOf="@id/btn13"
+                app:layout_constraintBottom_toBottomOf="@id/btn13"
+                android:tag="31"
+                android:text="N"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn15"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn14"
+                app:layout_constraintStart_toEndOf="@id/btn14"
+                app:layout_constraintBottom_toBottomOf="@id/btn14"
+                android:tag="32"
+                android:text="O"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn16"
+                style="@style/BtnStyle"
+                app:layout_constraintTop_toTopOf="@id/btn15"
+                app:layout_constraintStart_toEndOf="@id/btn15"
+                app:layout_constraintBottom_toBottomOf="@id/btn15"
+                android:tag="33"
+                android:text=""/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@color/card"
+        android:layout_marginTop="-30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="24dp"
+            android:layout_marginTop="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/groupStep"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toStartOf="@id/groupTime"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    style="@style/TvStyle"
+                    android:id="@+id/stepTv"
+                    android:text="Langkah:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    style="@style/TvStyle"
+                    android:id="@+id/step"
+                    android:text="0"
+                    app:layout_constraintStart_toEndOf="@id/stepTv"
+                    app:layout_constraintTop_toTopOf="@id/stepTv"
+                    app:layout_constraintBottom_toBottomOf="@id/stepTv"
+                    android:layout_marginLeft="4dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/groupStep"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/groupTime">
+
+                <TextView
+                    style="@style/TvStyle"
+                    android:id="@+id/timeTv"
+                    android:text="Waktu:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    style="@style/TvStyle"
+                    android:id="@+id/time"
+                    android:text="00:00:00"
+                    app:layout_constraintStart_toEndOf="@id/timeTv"
+                    app:layout_constraintTop_toTopOf="@id/timeTv"
+                    android:layout_marginLeft="4dp"
+                    app:layout_constraintBottom_toBottomOf="@id/timeTv"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@color/card"
+        android:layout_marginBottom="-30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnStartAndPause"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/start"
+                app:cornerRadius="50dp"
+                android:text="Start"
+                android:textAllCaps="false"
+                android:visibility="visible"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/inPause"
+                android:visibility="gone">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnContinue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:backgroundTint="@color/continue_100"
+                    app:cornerRadius="50dp"
+                    android:text="Continue"
+                    android:textAllCaps="false"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnRestart"
+                    app:layout_constraintBottom_toTopOf="@id/btnContinue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnStop"
+                    android:layout_marginRight="6dp"
+                    android:backgroundTint="@color/restart"
+                    app:cornerRadius="50dp"
+                    android:text="Restart"
+                    app:icon="@drawable/ic_baseline_wifi_protected_setup_24"
+                    android:textAllCaps="false"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnStop"
+                    app:icon="@drawable/ic_baseline_stop_24"
+                    app:layout_constraintBottom_toTopOf="@id/btnContinue"
+                    app:layout_constraintStart_toEndOf="@id/btnRestart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginLeft="6dp"
+                    android:backgroundTint="@color/stop"
+                    app:cornerRadius="50dp"
+                    android:text="Stop"
+                    android:textAllCaps="false"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>
